@@ -4,33 +4,37 @@ public class SkyscraperController : MonoBehaviour
 {
     public int currentWater = 1;
     public int neededWater;
-    private int maxWater = 4;
+    public int maxWater = 4;
 
+    private Camera camera;
+    
     void Start()
     {
-
+        camera = Camera.main;
     }
 
     void Update()
     {
+        // TODO: Display need water above building
         neededWater = maxWater - currentWater;
-
+        
         if (Input.GetMouseButtonDown(0))
         {
-            CheckTarget();
+            ClickableObject();
         }
 
     }
 
-    private void CheckTarget()
+    private void ClickableObject()
     {
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        RaycastHit2D hit = Physics2D.Raycast(camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit.collider != null)
         {
             if (hit.transform.CompareTag("Plant"))
             {
                 if (GameManager.instance.player.currentWaterInStock > 0)
                 {
+                    //TODO: Change sprite for greenishness
                     currentWater++;
                     GameManager.instance.player.currentWaterInStock--;
                     neededWater--;
@@ -38,6 +42,7 @@ public class SkyscraperController : MonoBehaviour
                 }
                 else
                 {
+                    //TODO: UI feedback for failed watering attempt.
                     print("You don't have any water!");
                 }
             }
@@ -48,6 +53,7 @@ public class SkyscraperController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            //TODO: fix movement bug.
             GameManager.instance.player.move = false;
         }
     }

@@ -6,7 +6,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 target;
     public bool move = false;
 
-    public int currentWaterInStock = 1;
+    public int currentWaterInStock = 0;
+    public int maxWaterInStock = 4;
     
     void Start()
     {

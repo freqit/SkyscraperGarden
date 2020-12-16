@@ -10,6 +10,8 @@
           <e p="GameManager.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="SkyscraperController.cs" t="Include" />
+          <e p="SupplyShed.cs" t="Include" />
+          <e p="UIManager.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
