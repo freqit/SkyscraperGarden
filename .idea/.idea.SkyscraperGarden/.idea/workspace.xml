@@ -11,6 +11,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SkyscraperController.cs" />
       </list>
     </option>
   </component>
@@ -53,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608111938060</updated>
-      <workItem from="1608111945335" duration="892000" />
+      <workItem from="1608111945335" duration="1298000" />
     </task>
     <servers />
   </component>
