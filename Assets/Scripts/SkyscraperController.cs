@@ -18,19 +18,20 @@ public class SkyscraperController : MonoBehaviour
         // TODO: Display need water above building
         neededWater = maxWater - currentWater;
         
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             ClickableObject();
-        }
+        }*/
 
     }
 
+    /*
     private void ClickableObject()
     {
         RaycastHit2D hit = Physics2D.Raycast(camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit.collider != null)
         {
-            if (hit.transform.CompareTag("Plant") && GameManager.instance.player.ObjectInsideRadius())
+            if (hit.transform.CompareTag("Plant"))
             {
                 if (GameManager.instance.player.currentWaterInStock > 0)
                 {
@@ -54,7 +55,8 @@ public class SkyscraperController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //TODO: fix movement bug.
-            GameManager.instance.player.move = false;
+            //GameManager.instance.player.move = false;
         }
     }
+    */
 }

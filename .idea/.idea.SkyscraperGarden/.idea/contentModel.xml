@@ -8,7 +8,15 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="GameManager.cs" t="Include" />
-          <e p="PlayerController.cs" t="Include" />
+          <e p="GatherableObject.cs" t="Include" />
+          <e p="Items" t="Include">
+            <e p="Item.cs" t="Include" />
+            <e p="ItemStack.cs" t="Include" />
+            <e p="WaterItem.cs" t="Include" />
+          </e>
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerInput.cs" t="Include" />
+          <e p="PlayerManager.cs" t="Include" />
           <e p="SkyscraperController.cs" t="Include" />
           <e p="SupplyShed.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />

@@ -1,0 +1,80 @@
+﻿using UnityEngine;
+
+public class PlayerManager : MonoBehaviour
+{
+    public int currentWaterInStock = 0;
+    public int maxWaterInStock = 4;
+    
+    public LayerMask obstacleLayerMask;
+
+    private BoxCollider2D collider;
+    
+    public enum PlayerState
+    {
+        IDLE,
+        MOVE,
+        ACTION,
+        STUN,
+    }
+
+    public PlayerState playerState;
+    
+    public void Start()
+    {
+        collider = GetComponent<BoxCollider2D>();
+    }
+
+    void Update()
+    {
+        
+    }
+
+    public void Move(Vector2 direction)
+    {
+        Vector2 isWalkable = direction.normalized;
+
+        RaycastHit2D hit = Physics2D.Raycast(collider.bounds.center, isWalkable, 1f, obstacleLayerMask);
+
+        if (hit.collider != null)
+        {
+            // Now we can access the gameobject and check if its a gatherable resource.
+            //InteractWithObstacle(gameObject) set playerState to ACTION.
+            //print(InteractWithObstacle(hit.collider.gameObject));
+            if (InteractWithObstacle(hit.collider.gameObject))
+            {
+                playerState = PlayerState.ACTION;
+            }
+
+        }
+        else
+        {
+            // if no obstacle then we can move.
+            transform.Translate(direction);
+            playerState = PlayerState.MOVE;
+        }
+    }
+
+    private bool InteractWithObstacle(GameObject obj)
+    {
+
+        if (obj.CompareTag("Gatherable"))
+        {
+            ItemStack itemStack = obj.GetComponent<GatherableObject>().GatherObject();
+            if (currentWaterInStock < maxWaterInStock)
+            {
+                // Debug prints
+                print("You get " + itemStack.Value + " " + itemStack.Item.Name);
+                currentWaterInStock += itemStack.Value;
+            }
+            return true;
+        }
+
+        if (obj.CompareTag("Plant"))
+        {
+            currentWaterInStock--;
+        }
+
+
+        return false;
+    }
+}
