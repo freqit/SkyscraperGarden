@@ -5,10 +5,11 @@ public class PlayerController : MonoBehaviour
     private float speed = 5f;
     private Vector3 target;
     public bool move = false;
+
+    public int currentWaterInStock = 1;
     
     void Start()
     {
-        
     }
 
     void Update()

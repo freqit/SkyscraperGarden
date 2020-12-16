@@ -5,10 +5,10 @@ public class SkyscraperController : MonoBehaviour
     public int currentWater = 1;
     public int neededWater;
     private int maxWater = 4;
-    
+
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -29,8 +29,17 @@ public class SkyscraperController : MonoBehaviour
         {
             if (hit.transform.CompareTag("Plant"))
             {
-                currentWater++;
-                print("Current Water: " + currentWater);
+                if (GameManager.instance.player.currentWaterInStock > 0)
+                {
+                    currentWater++;
+                    GameManager.instance.player.currentWaterInStock--;
+                    neededWater--;
+                    print("You have " + GameManager.instance.player.currentWaterInStock + " water");
+                }
+                else
+                {
+                    print("You don't have any water!");
+                }
             }
         }
     }
@@ -39,8 +48,7 @@ public class SkyscraperController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            var player = other.gameObject.GetComponent<PlayerController>();
-            player.move = false;
+            GameManager.instance.player.move = false;
         }
     }
 }
