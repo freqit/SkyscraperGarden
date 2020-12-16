@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 1600952059}
   - component: {fileID: 1600952058}
   m_Layer: 0
-  m_Name: 16x16
+  m_Name: Skyscraper0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 1971980698}
   - component: {fileID: 1971980697}
   m_Layer: 0
-  m_Name: 8x8
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
