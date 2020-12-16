@@ -71,7 +71,8 @@ public class PlayerManager : MonoBehaviour
 
         if (obj.CompareTag("Plant"))
         {
-            currentWaterInStock--;
+            if(currentWaterInStock > 0)
+                currentWaterInStock--;
         }
 
 
