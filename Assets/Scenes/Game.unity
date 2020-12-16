@@ -870,6 +870,7 @@ MonoBehaviour:
   maxWater: 7
   planted: {fileID: 21300000, guid: c1ecb507065aa254ca22cdee4f8cda34, type: 3}
   needText: {fileID: 923407370}
+  org: {fileID: 21300000, guid: 8c56872731aaa984d9c9abb2a760e681, type: 3}
 --- !u!61 &894754244
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1592,6 +1593,7 @@ MonoBehaviour:
   maxWater: 3
   planted: {fileID: 21300000, guid: d8282ab1186ebfe4ead6a560637dd5a1, type: 3}
   needText: {fileID: 1239591196}
+  org: {fileID: 21300000, guid: 7109a7d85281f024590f81a5bdca16cd, type: 3}
 --- !u!61 &1280030125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1810,6 +1812,7 @@ MonoBehaviour:
   maxWater: 4
   planted: {fileID: 21300000, guid: 10145897fec45194a967faca6e2eb134, type: 3}
   needText: {fileID: 60232842}
+  org: {fileID: 21300000, guid: d5820a2b3aab25b46a62fb1361b9e791, type: 3}
 --- !u!1 &1971980696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,6 +2011,7 @@ MonoBehaviour:
   maxWater: 9
   planted: {fileID: 21300000, guid: e3becaf27fdb93443b48c36f69c130a9, type: 3}
   needText: {fileID: 870477220}
+  org: {fileID: 21300000, guid: 856d6553bc05dd241a1c697ff4cc29f3, type: 3}
 --- !u!61 &1976115827
 BoxCollider2D:
   m_ObjectHideFlags: 0

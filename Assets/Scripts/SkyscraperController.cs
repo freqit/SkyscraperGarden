@@ -9,12 +9,11 @@ public class SkyscraperController : MonoBehaviour
 
     public Sprite planted;
     public TMP_Text needText;
-    private Sprite org;
+    public Sprite org;
     private SpriteRenderer sr;
     
     void Start()
     {
-        org = sr.sprite;
     }
 
     void Update()
