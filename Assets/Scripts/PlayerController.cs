@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private float speed = 5f;
     private Vector3 target;
-    private bool move = false;
+    public bool move = false;
     
     void Start()
     {
@@ -15,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             SetTargetPos();
         }
