@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     public bool ObjectInsideRadius()
     {
         //TODO: hits itself
-        RaycastHit2D hit = Physics2D.CircleCast(transform.position + collider.bounds.size, 2f, transform.forward);
+        RaycastHit2D hit = Physics2D.CircleCast(collider.bounds.size, 2f, transform.forward);
         Debug.DrawRay(transform.position, transform.forward, Color.blue, 2f);
         if (hit.collider != null)
         {
