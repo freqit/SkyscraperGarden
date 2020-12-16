@@ -30,7 +30,7 @@ public class SkyscraperController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit.collider != null)
         {
-            if (hit.transform.CompareTag("Plant"))
+            if (hit.transform.CompareTag("Plant") && GameManager.instance.player.ObjectInsideRadius())
             {
                 if (GameManager.instance.player.currentWaterInStock > 0)
                 {

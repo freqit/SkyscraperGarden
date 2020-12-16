@@ -24,7 +24,7 @@ public class SupplyShed : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit.collider != null)
         {
-            if (hit.transform.CompareTag("Supplies"))
+            if (hit.transform.CompareTag("Supplies") && GameManager.instance.player.ObjectInsideRadius())
             {
                 if (GameManager.instance.player.currentWaterInStock < GameManager.instance.player.maxWaterInStock)
                 {

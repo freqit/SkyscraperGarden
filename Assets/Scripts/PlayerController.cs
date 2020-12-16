@@ -8,9 +8,12 @@ public class PlayerController : MonoBehaviour
 
     public int currentWaterInStock = 0;
     public int maxWaterInStock = 4;
+
+    private BoxCollider2D collider;
     
     void Start()
     {
+        collider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -26,6 +29,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool ObjectInsideRadius()
+    {
+        //TODO: hits itself
+        RaycastHit2D hit = Physics2D.CircleCast(collider.bounds.size, 2f, transform.forward);
+        Debug.DrawRay(transform.position, transform.forward, Color.blue, 2f);
+        if (hit.collider != null)
+        {
+            print(hit.collider.gameObject.name);
+            return hit;
+        }
+
+        return false;
+    }
+    
     private void SetTargetPos()
     {
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
