@@ -82,6 +82,8 @@ public class PlayerManager : MonoBehaviour
                 {
                     currentWaterInStock--;
                     obj.gameObject.GetComponent<SkyscraperController>().currentWater++;
+                    var sky = obj.gameObject.GetComponent<SkyscraperController>();
+                    obj.gameObject.GetComponent<SpriteRenderer>().sprite = sky.planted;
                     GameManager.instance.tick += 4;
                 }
 

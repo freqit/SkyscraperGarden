@@ -7,10 +7,14 @@ public class SkyscraperController : MonoBehaviour
     public int neededWater;
     public int maxWater = 4;
 
+    public Sprite planted;
     public TMP_Text needText;
-
+    private Sprite org;
+    private SpriteRenderer sr;
+    
     void Start()
     {
+        org = sr.sprite;
     }
 
     void Update()
