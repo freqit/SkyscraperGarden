@@ -38,8 +38,6 @@ public class PlayerManager : MonoBehaviour
         if (hit.collider != null)
         {
             // Now we can access the gameobject and check if its a gatherable resource.
-            //InteractWithObstacle(gameObject) set playerState to ACTION.
-            //print(InteractWithObstacle(hit.collider.gameObject));
             if (InteractWithObstacle(hit.collider.gameObject))
             {
                 playerState = PlayerState.ACTION;
@@ -74,8 +72,6 @@ public class PlayerManager : MonoBehaviour
             if(currentWaterInStock > 0)
                 currentWaterInStock--;
         }
-
-
         return false;
     }
 }
