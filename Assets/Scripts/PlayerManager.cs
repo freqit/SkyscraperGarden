@@ -14,7 +14,6 @@ public class PlayerManager : MonoBehaviour
         IDLE,
         MOVE,
         ACTION,
-        STUN,
     }
 
     public PlayerState playerState;

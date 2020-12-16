@@ -29,7 +29,7 @@ public class PlayerInput : MonoBehaviour
             controller.Move(new Vector2(1f, 0f));
         }
         
-        // Game quit
+        // Game quit- can move to GameManger or UIManager later
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();

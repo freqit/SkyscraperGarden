@@ -14,11 +14,13 @@
             <e p="ItemStack.cs" t="Include" />
             <e p="WaterItem.cs" t="Include" />
           </e>
-          <e p="Player.cs" t="Include" />
+          <e p="NotUsed" t="Include">
+            <e p="Player.cs" t="Include" />
+            <e p="SupplyShed.cs" t="Include" />
+          </e>
           <e p="PlayerInput.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
           <e p="SkyscraperController.cs" t="Include" />
-          <e p="SupplyShed.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
         </e>
       </e>
