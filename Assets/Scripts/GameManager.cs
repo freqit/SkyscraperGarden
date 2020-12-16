@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public PlayerManager player;
+
+    public int tick = 10;
     
     public static GameManager instance;
     

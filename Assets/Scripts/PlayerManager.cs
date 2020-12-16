@@ -30,6 +30,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Move(Vector2 direction)
     {
+        GameManager.instance.tick--;
         Vector2 isWalkable = direction.normalized;
 
         RaycastHit2D hit = Physics2D.Raycast(collider.bounds.center, isWalkable, 1f, obstacleLayerMask);
@@ -68,8 +69,24 @@ public class PlayerManager : MonoBehaviour
 
         if (obj.CompareTag("Plant"))
         {
-            if(currentWaterInStock > 0)
-                currentWaterInStock--;
+            if (currentWaterInStock > 0)
+            {
+
+                if (obj.gameObject.GetComponent<SkyscraperController>().currentWater ==
+                    obj.gameObject.GetComponent<SkyscraperController>().maxWater)
+                {
+                    // TODO: stuff
+                    return false;
+                }
+                else
+                {
+                    currentWaterInStock--;
+                    obj.gameObject.GetComponent<SkyscraperController>().currentWater++;
+                    GameManager.instance.tick += 4;
+                }
+
+                return true;
+            }
         }
         return false;
     }

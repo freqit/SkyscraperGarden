@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 public class SkyscraperController : MonoBehaviour
 {
@@ -6,13 +7,20 @@ public class SkyscraperController : MonoBehaviour
     public int neededWater;
     public int maxWater = 4;
 
+    public TMP_Text needText;
+
     void Start()
     {
     }
 
     void Update()
     {
-        // TODO: Display need water above building
+        if (neededWater <= 0)
+        {
+            neededWater = 0;
+        }
+        
         neededWater = maxWater - currentWater;
+        needText.text = neededWater.ToString();
     }
 }
